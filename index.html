@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shih-Syuan Huang | Hardware Security Architect</title>
+    <style>
+        :root {
+            --primary-color: #2e5a88; /* Rambus Blue Inspired */
+            --secondary-color: #555;
+            --bg-color: #f4f7f9;
+            --text-color: #333;
+            --accent-color: #e67e22;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: var(--white);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-top: 8px solid var(--primary-color);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .header-main h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+        }
+
+        .header-main p {
+            margin: 5px 0;
+            font-size: 1.2em;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 0.95em;
+        }
+
+        .contact-info div {
+            margin-bottom: 3px;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 15px;
+            background: #f0f4f8;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .summary-text {
+            font-size: 1.05em;
+            text-align: justify;
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .skill-label {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #222;
+        }
+
+        .exp-subhead {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .v-award {
+            display: inline-block;
+            background: #fff3cd;
+            color: #856404;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+            border: 1px solid #ffeeba;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background: #eef2f7;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            color: #444;
+            margin-right: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; margin: 0; }
+            header { flex-direction: column; text-align: center; }
+            .header-main { width: 100%; }
+            .contact-info { width: 100%; text-align: center; margin-top: 15px; }
+            .exp-header, .exp-subhead, .edu-item { flex-direction: column; }
+            .skill-grid { grid-template-columns: 1fr; gap: 5px; }
+        }
+
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; border: none; max-width: 100%; width: 100%; padding: 0; }
+            .v-award { border: 1px solid #000; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-main">
+            <h1>Shih-Syuan Huang</h1>
+            <p>Hardware Security Architect & Lead Designer</p>
+        </div>
+        <div class="contact-info">
+            <div>?? Taipei, Taiwan</div>
+            <div>?? <a href="mailto:qllvv.1113@gmail.com">qllvv.1113@gmail.com</a></div>
+            <div>?? <a href="#">LinkedIn Profile</a></div>
+        </div>
+    </header>
+
+    <section id="summary">
+        <h2>Professional Summary</h2>
+        <p class="summary-text">
+            Hardware Security Architect & Lead Designer with 10+ years in secure silicon IP design, cryptographic engines, TRNGs, and TrustZone systems. 
+            Proven in leading architecture definition for <strong>NIST/NAGRA/Netflix certified IPs</strong> (AES, SHA, RSA, TRNG, scramblers). 
+            Skilled in countermeasures against side-channel, fault injection, and timing attacks, as well as ASIC front-end flows (RTL to netlist, ECO).
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Core Skills</h2>
+        <div class="skill-grid">
+            <div class="skill-label">Security</div>
+            <div>TRNG, AES/SHA/HMAC/RSA, Memory Scramblers, TrustZone/Realm, SMMU/Firewall, Secure Boot, HW Key Ladder, SCA/FI Mitigation.</div>
+        </div>
+        <div class="skill-grid">
+            <div class="skill-label">ASIC/Integration</div>
+            <div>Verilog, RTL/C Co-simulation, Lint, CDC, Synthesis/STA, Scan/DFT/Scandump, Formal/ECO (~2K gates), AHB/APB/AXI.</div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span>MediaTek</span>
+                <span>2022.6 ¡V Present</span>
+            </div>
+            <div class="exp-subhead">
+                <span>Digital Circuit Designer</span>
+                <span>Taipei</span>
+            </div>
+            <ul>
+                <li>Lead security architecture definition and review for multiple ASIC projects.</li>
+                <li>Conduct technical reviews for security-critical modules and cross-team integration.</li>
+                <li>Design <strong>scandump IP</strong>; mentored cross-department juniors to implement customized flow, accelerating debug time. <span class="v-award">?? V-award</span></li>
+                <li>Integrate debug infrastructure: USB debug class, bus monitor to DRAM.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span>Chunghwa Telecom</span>
+                <span>2021.12 ¡V 2022.6</span>
+            </div>
+            <div class="exp-subhead">
+                <span>Senior Researcher</span>
+                <span>Taipei</span>
+            </div>
+            <ul>
+                <li>Researched 5G/6G mobile network security and 6G preliminary architecture.</li>
+                <li>Contributed to 6G-related patent proposals and internal technical reports.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span>MediaTek</span>
+                <span>2020.7 ¡V 2021.6</span>
+            </div>
+            <div class="exp-subhead">
+                <span>Digital Circuit Designer</span>
+                <span>Hsinchu</span>
+            </div>
+            <ul>
+                <li>Designed <strong>TRNG</strong> for DRAM interface scrambler (pure HW, time-independent). <span class="v-award">?? V-award</span></li>
+                <li>Implemented secure boot and security control for AHB/APB/AXI buses.</li>
+                <li>Integrated licensed security processor IP and reviewed access control mechanisms.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span>Novatek</span>
+                <span>2013 ¡V 2019.10</span>
+            </div>
+            <div class="exp-subhead">
+                <span>Digital Circuit Designer</span>
+                <span>Hsinchu</span>
+            </div>
+            <p><strong>Security IP Design & Integration:</strong></p>
+            <ul>
+                <li>Architected Arm TZC-380 enhancement; led technical effort to achieve <strong>Netflix TZMP2 certification</strong>.</li>
+                <li>Developed DRAM/SPI scramblers; passed <strong>NAGRA certification</strong>.</li>
+                <li>Designed AES/Multi-2/SHA/HMAC/RSA/TRNG (NIST SP800-22).</li>
+                <li>Implemented countermeasures: atomic AES/DES (Fault Attack), constant-time RSA (Timing Attack), and early SCA analysis.</li>
+                <li>Innovated boot time reduction (30%) via direct FIFO crypto path.</li>
+            </ul>
+            <p><strong>SoC Integration & ASIC Flow:</strong></p>
+            <ul>
+                <li>Integrated Mali-400/450/G51 (First market Mali-G51 ASIC).</li>
+                <li>Led partition integration for 2 ASICs; Handled synthesis, scan, formal, and manual ECOs.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span>MediaTek</span>
+                <span>2010 ¡V 2013</span>
+            </div>
+            <div class="exp-subhead">
+                <span>Firmware Engineer</span>
+                <span>Hsinchu</span>
+            </div>
+            <ul>
+                <li>Developed 3G modem/RF firmware in <strong>embedded C</strong>; optimized boot time and cost savings.</li>
+                <li>Supported customers with "BlueScreen" mechanism and SOPs. <span class="v-award">?? V-award</span></li>
+                <li>Conducted workshops for 30+ engineers.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="edu-item">
+            <strong>National Chiao-Tung University (NCTU)</strong>
+            <span>M.S. in Electrical and Control Engineering | GPA: 4.0</span>
+        </div>
+        <div class="edu-item">
+            <strong>National Chiao-Tung University (NCTU)</strong>
+            <span>B.S. in Electrical and Control Engineering | GPA: 3.7</span>
+        </div>
+        <div class="edu-item">
+            <strong>National Chiao-Tung University (NCTU)</strong>
+            <span>B.S. in Applied Mathematics (Double Major) | GPA: 3.7</span>
+        </div>
+    </section>
+
+    <section id="honors">
+        <h2>Honors & Awards</h2>
+        <ul>
+            <li><strong>MediaTek V-Awards:</strong> Team (2025 Summer, 2020 Fall), Customer (2025 Spring, 2012 Fall).</li>
+            <li><strong>Academic Awards:</strong> NCTU (2004, 2009), SanChung City (2009), NCTU Scholarship (2007).</li>
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>
