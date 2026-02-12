@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shih-Syuan Huang | Hardware Security Architect</title>
-    <style>
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" id="u0" href="https://zh-tw.rakko.tools/tools/129/lib/tinymce/skins/ui/oxide/content.min.css"><link rel="stylesheet" type="text/css" id="u1" href="https://zh-tw.rakko.tools/tools/129/lib/tinymce/skins/content/default/content.min.css"><style id="fullpage_styles">
         :root {
             --primary-color: #2e5a88; /* Rambus Blue Inspired */
             --secondary-color: #555;
@@ -92,7 +86,7 @@
 
         .skill-grid {
             display: grid;
-            grid-template-columns: 120px 1fr;
+            grid-template-columns: 140px 1fr; /* Slightly wider for the label */
             gap: 15px;
             margin-bottom: 10px;
         }
@@ -104,6 +98,7 @@
 
         .experience-item {
             margin-bottom: 25px;
+            page-break-inside: avoid; /* Better for printing */
         }
 
         .exp-header {
@@ -142,17 +137,6 @@
             border: 1px solid #ffeeba;
         }
 
-        .tech-tag {
-            display: inline-block;
-            background: #eef2f7;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-size: 0.85em;
-            color: #444;
-            margin-right: 5px;
-            border: 1px solid #ddd;
-        }
-
         .edu-item {
             display: flex;
             justify-content: space-between;
@@ -172,162 +156,6 @@
             body { background: white; }
             .container { box-shadow: none; border: none; max-width: 100%; width: 100%; padding: 0; }
             .v-award { border: 1px solid #000; }
+            a { text-decoration: none; color: black; }
         }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <header>
-        <div class="header-main">
-            <h1>Shih-Syuan Huang</h1>
-            <p>Hardware Security Architect & Lead Designer</p>
-        </div>
-        <div class="contact-info">
-            <div>📍 Taipei, Taiwan</div>
-            <div>📧 <a href="mailto:qq.coco01@gmail.com">qq.coco01@gmail.com</a></div>
-        </div>
-    </header>
-
-    <section id="summary">
-        <h2>Professional Summary</h2>
-        <p class="summary-text">
-            Hardware Security Architect & Lead Designer with 10+ years in secure silicon IP design, cryptographic engines, TRNGs, and TrustZone systems. 
-            Proven in leading architecture definition for <strong>NIST/NAGRA/Netflix certified IPs</strong> (AES, SHA, RSA, TRNG, scramblers). 
-            Skilled in countermeasures against side-channel, fault injection, and timing attacks, as well as ASIC front-end flows (RTL to netlist, ECO).
-        </p>
-    </section>
-
-    <section id="skills">
-        <h2>Core Skills</h2>
-        <div class="skill-grid">
-            <div class="skill-label">Security</div>
-            <div>TRNG, AES/SHA/HMAC/RSA, Memory Scramblers, TrustZone/Realm, SMMU/Firewall, Secure Boot, HW Key Ladder, SCA/FI Mitigation.</div>
-        </div>
-        <div class="skill-grid">
-            <div class="skill-label">ASIC/Integration</div>
-            <div>Verilog, RTL/C Co-simulation, Lint, CDC, Synthesis/STA, Scan/DFT/Scandump, Formal/ECO (~2K gates), AHB/APB/AXI.</div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-
-        <div class="experience-item">
-            <div class="exp-header">
-                <span>MediaTek</span>
-                <span>2022.6 – Present</span>
-            </div>
-            <div class="exp-subhead">
-                <span>Digital Circuit Design Technical Manager</span>
-                <span>Taipei</span>
-            </div>
-            <ul>
-                <li>Lead security architecture definition and review for multiple ASIC projects.</li>
-                <li>Conduct technical reviews for security-critical modules and cross-team integration.</li>
-                <li>Design <strong>scandump IP</strong>; mentored cross-department juniors to implement customized flow, accelerating debug time. <span class="v-award">🏆 V-award</span></li>
-                <li>Integrate debug infrastructure: USB debug class, bus monitor to DRAM.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <div class="exp-header">
-                <span>Chunghwa Telecom</span>
-                <span>2021.12 – 2022.6</span>
-            </div>
-            <div class="exp-subhead">
-                <span>Senior Researcher</span>
-                <span>Taipei</span>
-            </div>
-            <ul>
-                <li>Researched 5G/6G mobile network security and 6G preliminary architecture.</li>
-                <li>Contributed to 6G-related patent proposals and internal technical reports.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <div class="exp-header">
-                <span>MediaTek</span>
-                <span>2020.7 – 2021.6</span>
-            </div>
-            <div class="exp-subhead">
-                <span>Digital Circuit Design, Senior Engineer</span>
-                <span>Hsinchu</span>
-            </div>
-            <ul>
-                <li>Designed <strong>TRNG</strong> for DRAM interface scrambler (pure HW, time-independent). <span class="v-award">🏆 V-award</span></li>
-                <li>Implemented secure boot and security control for AHB/APB/AXI buses.</li>
-                <li>Integrated licensed security processor IP and reviewed access control mechanisms.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <div class="exp-header">
-                <span>Novatek</span>
-                <span>2013 – 2019.10</span>
-            </div>
-            <div class="exp-subhead">
-                <span>Digital Circuit Design, Senior Engineer</span>
-                <span>Hsinchu</span>
-            </div>
-            <p><strong>Security IP Design & Integration:</strong></p>
-            <ul>
-                <li>Architected Arm TZC-380 enhancement; led technical effort to achieve <strong>Netflix TZMP2 certification</strong>.</li>
-                <li>Developed DRAM/SPI scramblers; passed <strong>NAGRA certification</strong>.</li>
-                <li>Designed AES/Multi-2/SHA/HMAC/RSA/TRNG (NIST SP800-22).</li>
-                <li>Implemented countermeasures: atomic AES/DES (Fault Attack), constant-time RSA (Timing Attack), and early SCA analysis.</li>
-                <li>Innovated boot time reduction (30%) via direct FIFO crypto path.</li>
-            </ul>
-            <p><strong>SoC Integration & ASIC Flow:</strong></p>
-            <ul>
-                <li>Integrated Mali-400/450/G51 (First market Mali-G51 ASIC).</li>
-                <li>Led partition integration for 2 ASICs; Handled synthesis, scan, formal, and manual ECOs.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <div class="exp-header">
-                <span>MediaTek</span>
-                <span>2010 – 2013</span>
-            </div>
-            <div class="exp-subhead">
-                <span>Firmware Engineer</span>
-                <span>Hsinchu</span>
-            </div>
-            <ul>
-                <li>Developed 3G modem/RF firmware in <strong>embedded C</strong>; optimized boot time and cost savings.</li>
-                <li>Supported customers with "BlueScreen" mechanism and SOPs. <span class="v-award">🏆 V-award</span></li>
-                <li>Conducted workshops for 30+ engineers.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <div class="edu-item">
-            <strong>National Chiao-Tung University (NCTU)</strong>
-            <span>M.S. in Electrical and Control Engineering | GPA: 4.0</span>
-        </div>
-        <div class="edu-item">
-            <strong>National Chiao-Tung University (NCTU)</strong>
-            <span>B.S. in Electrical and Control Engineering | GPA: 3.7</span>
-        </div>
-        <div class="edu-item">
-            <strong>National Chiao-Tung University (NCTU)</strong>
-            <span>B.S. in Applied Mathematics (Double Major) | GPA: 3.7</span>
-        </div>
-    </section>
-
-    <section id="honors">
-        <h2>Honors & Awards</h2>
-        <ul>
-            <li><strong>MediaTek V-Awards:</strong> Team (2025 Summer, 2020 Fall), Customer (2025 Spring, 2012 Fall).</li>
-            <li><strong>Academic Awards:</strong> NCTU (2004, 2009), SanChung City (2009), NCTU Scholarship (2007).</li>
-        </ul>
-    </section>
-</div>
-
-</body>
-</html>
-
-
+    </style></head><body id="tinymce" class="mce-content-body " data-id="content" contenteditable="true" spellcheck="false"><div class="container"><header><div class="header-main"><h1>Shih-Syuan Huang</h1><p>Hardware Security Engineer</p></div><div class="contact-info"><!-- Address removed as per LaTeX, keeping layout consistent --><div>📧 <a href="mailto:qllvv.1113@gmail.com" data-mce-href="mailto:qllvv.1113@gmail.com">qllvv.1113@gmail.com</a></div></div></header><section id="summary"><h2>Professional Summary</h2><p class="summary-text">Hardware Security Engineer with 10+ years of experience in secure hardware design, cryptographic engines, TRNGs, memory scramblers, and TrustZone-based systems. Proven expertise in designing SDL (Secure Development Lifecycle) and security IPs (AES, SHA, RSA, TRNG, OTP) certified by Netflix, NAGRA, and NIST SP800-22. Skilled in countermeasures against side-channel, timing attacks and threat modeling, as well as ASIC front-end flows (RTL to netlist, ECO).</p></section><section id="skills"><h2>Core Skills</h2><div class="skill-grid"><div class="skill-label">Security</div><div>TRNG, AES/SHA/HMAC/RSA, memory scramblers, SDL, TrustZone/Realm, SMMU/firewall, security boot, HW key ladder, SCA/FI mitigation, Threat Modeling.</div></div><div class="skill-grid"><div class="skill-label">ASIC/Integration</div><div>Verilog, RTL/C co-simulation, Lint, CDC, synthesis/STA, scandump, formal/ECO (~2K gates); AHB/APB/AXI, boot optimization.</div></div></section><section id="experience"><h2>Experience</h2><div class="experience-item"><div class="exp-header">MediaTek2022.6 – Present</div><div class="exp-subhead">Technical Manager, Digital Circuit DesignTaipei</div><p style="margin: 5px 0; font-style: italic;" data-mce-style="margin: 5px 0; font-style: italic;">Acting as the Lead Security Architect for flagship ASIC projects.</p><ul><li><strong>Security Architecture Leadership:</strong> Define and review system-level security requirements (Root of Trust, Secure Boot, Debug Policy) for multiple SoC product lines; ensure compliance with industry standards.</li><li><strong>Secure Infrastructure Design:</strong> Architected secure debug subsystems (USB debug class) and bus monitoring modules (DRAM firewall), balancing security with observability.</li><li><strong>Cross-Functional Mentorship:</strong> Mentored junior engineers on customized "scandump" IP design flows, significantly accelerating debug turnaround time. <span class="v-award">🏆 V-award</span></li></ul></div><div class="experience-item"><div class="exp-header">Chunghwa Telecom2021.12 – 2022.6</div><div class="exp-subhead">Senior ResearcherTaipei</div><p>Researched 5G/6G mobile network security architectures and contributed to patent proposals.</p></div><div class="experience-item"><div class="exp-header">MediaTek2020.7 – 2021.6</div><div class="exp-subhead">Technical Manager, Digital Circuit DesignHsinchu</div><ul><li><strong>TRNG Innovation:</strong> Designed a high-entropy, process-independent TRNG for DRAM interface scramblers; successfully validated in silicon. <span class="v-award">🏆 V-award</span></li><li><strong>SoC Security Integration:</strong> Implemented granular access control policies for AHB/APB/AXI buses to isolate secure assets.</li><li><strong>IP Integration:</strong> Led the integration of third-party security processors (HSE), overseeing secure boot flows and key management logic.</li></ul></div><div class="experience-item"><div class="exp-header">North America Intellectual Property Corp.2019.11 – 2020.7</div><div class="exp-subhead">Patent EngineerTaipei</div><p>Patent analysis, prior art search, and official action response writing.</p></div><div class="experience-item"><div class="exp-header">Novatek2013 – 2019.10</div><div class="exp-subhead">Digital Circuit Design, Senior EngineerHsinchu</div><p><strong>Security IP Design &amp; Integration:</strong></p><ul><li>Enhanced Arm TZC‑380 with TZC‑400 features; implemented Netflix <strong>TZMP2 certification</strong>.</li><li>Developed DRAM/SPI scramblers; passed <strong>NAGRA certification</strong>.</li><li>Designed AES/Multi-2/SHA1/2/HMAC/HKDF/RSA/TRNG (NIST SP800-22); 8051+mailbox key ladder/derivation; HDMI AES 3→2.</li><li>Implemented countermeasures: atomic AES/DES for fault attacks, constant-time RSA for timing attacks, and early side-channel analysis.</li><li>Reduced boot time by 30% via direct FIFO path to crypto IPs (bypassing DRAM) and gunzip.</li></ul><p><strong>SoC Integration &amp; ASIC Flow:</strong></p><ul><li>Integrated Mali-400/450/G51 (first market Mali-G51 ASIC; Mali-450 5PP+MBIST).</li><li>Handled synthesis, scan insertion, formal check, STA, and manual ECOs (~2K gates in 2 weeks).</li></ul></div><div class="experience-item"><div class="exp-header">MediaTek2010 – 2013</div><div class="exp-subhead">Firmware EngineerHsinchu</div><ul><li>Developed 3G modem/RF firmware in <strong>embedded C</strong>; optimized boot time by reordering calibration sequences; shared oscillators (3G+WiFi) for cost savings.</li><li>Implemented fast calibration algorithms and in-house tool interfaces.</li><li>Supported customers with debugging tools ("BlueScreen" mechanism) and SOPs. <span class="v-award">🏆 V-award</span></li></ul></div></section><section id="education"><h2>Education</h2><div class="edu-item"><strong>M.S. in Electrical and Control Engineering</strong>National Chiao-Tung University | GPA: 4.0 | 2007 – 2009</div><div class="edu-item"><strong>B.S. in Electrical and Control Engineering</strong>National Chiao-Tung University | GPA: 3.7 | 2003 – 2007</div><div class="edu-item"><strong>B.S. in Applied Mathematics (Second Major)</strong>National Chiao-Tung University | GPA: 3.7 | 2003 – 2007</div></section><section id="honors"><h2>Honors &amp; Awards</h2><ul><li>MediaTek <strong>V-Awards</strong> (Team: 2025 Summer/2020 Fall; Customer: 2025 Spring/2012 Fall).</li><li>Academic awards (NCTU: 2004, 2009; SanChung City: 2009); Scholarship (NCTU: 2007).</li></ul></section></div></body></html>
